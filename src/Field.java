@@ -2,17 +2,17 @@
 public class Field {
 	
 	public int fieldSize;
-	public int[][] dzSquare;
+	public double[][] dzSquare;
 	public int[][] landmarks;
 	
 	public Field(int _fieldSize)
 	{
 		fieldSize = _fieldSize;
-		int[] dz_tl = {40, 60};
-		int[] dz_tr = {60, 60};
-		int[] dz_bl = {40, 40};
-		int[] dz_br = {60, 40};
-		dzSquare = new int[][] {dz_tl, dz_tr,dz_bl, dz_br};
+		double[] dz_tl = {40, 60};
+		double[] dz_tr = {60, 60};
+		double[] dz_bl = {40, 40};
+		double[] dz_br = {60, 40};
+		dzSquare = new double[][] {dz_tl, dz_tr,dz_bl, dz_br};
 		
 		landmarks = new int[][] {{0, 0}, {50, 39}, {60, 39}, 
 								{65, 0}, {0, 40}, {99, 99}, 
@@ -21,7 +21,7 @@ public class Field {
 		
 	}
 	
-	public int[][] getDeadzones()
+	public double[][] getDeadzones()
 	{
 		return dzSquare;
 	}
